@@ -1,3 +1,11 @@
-name, age = "Adam", 20
+brand = "Amigoscode"
+age = 2
+PI = 3.1415
+numbers = []
+isAdult = True
 
-print("Welcome {}, you are {}".format(name, age))
+print(type(brand))
+print(type(age))
+print(type(numbers))
+print(type(PI))
+print(type(isAdult))
