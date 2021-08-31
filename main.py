@@ -1,11 +1,6 @@
-brand = "Amigoscode"
-age = 2
-PI = 3.1415
-numbers = []
-isAdult = True
+brand: str = "Amigoscode"
+isAdult: bool = False
 
-print(type(brand))
-print(type(age))
-print(type(numbers))
-print(type(PI))
-print(type(isAdult))
+# def hello() -> str: this would force the returned value to be a string
+def hello():
+    return "Hello"
