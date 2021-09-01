@@ -1,14 +1,29 @@
+names = ["Ahmed", "Anna", "James", "Jamila"]
+
+# For loop works with list or set
+for person in names:
+    print(person)
+
 person = {
     "name": "Adam",
-    "age": 20,
-    "address": "USA"
+    "age": 39,
+    "address": "GB"
 }
 
-print(person["name"])
-print(person["age"])
-print(person["address"])
-print(person.keys())
-print(person.values())
-# person.clear()
-person["age"] = 100
-print(person)
+for key in person:
+    print(f"key:{key} value:{person[key]}")
+
+for key, value in person.items():
+    print(f"key:{key} value:{value}")
+
+print(person.items())
+
+
+# EXERCISE - add numbers in the list
+numbers = [2, 4, 6, 8]
+
+result = 0
+for i in numbers:
+    result += i
+
+print(f"Result = {result}")
