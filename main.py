@@ -1,11 +1,6 @@
-brand = "Amigoscode"
-age = 2
-PI = 3.1415
-numbers = []
-isAdult = True
-
-print(type(brand))
-print(type(age))
-print(type(numbers))
-print(type(PI))
-print(type(isAdult))
+print(10 > 5)
+print(10 <= 10)
+print(10 != 5)
+print(10 == 10)
+print(2 > 3)
+# really quick change
