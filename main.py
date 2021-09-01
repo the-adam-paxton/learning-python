@@ -1,8 +1,8 @@
-number = 1
-message = "Positive" if number > 0 else "0 or negative"
-print(message)
+numbers = [1, 2, 3, 4, -1, 0, -20]
 
-if number > 0:
-    print("Positive")
-else:
-    print("0 or negative")
+#numbers.sort()
+#numbers.reverse()
+#numbers.append(1000)
+#print(len(numbers))
+#numbers.clear()
+print(4 in numbers)
