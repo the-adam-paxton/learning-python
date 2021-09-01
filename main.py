@@ -1,8 +1,8 @@
-number = 15
+number = 1
+message = "Positive" if number > 0 else "0 or negative"
+print(message)
 
 if number > 0:
-    print(f"Number {number} is positive")
-elif number == 0:
-    print("Number is Zero")
+    print("Positive")
 else:
-    print(f"Number {number} is Negative")
+    print("0 or negative")
