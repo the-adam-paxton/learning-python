@@ -1,7 +1,9 @@
-numbersList = [1, 2, 3, 4, -1, 0, -20, 1]
-numbersSet = {1, 1}
-lettersSet = {"A", "A", "B", "C"}  # no duplicates output and order is not guaranteed
+lettersA = {"A", "B", "C", "D"}
+lettersB = {"A", "E", "F"}
+union = lettersA | lettersB  # Add them together, order not guaranteed
+intersection = lettersA & lettersB  # What occurs in both
+difference = lettersA - lettersB  # What occurs in lettersA but not in lettersB
 
-print(numbersList)
-print(numbersSet)
-print(lettersSet)
+print(f"Union {union}")
+print(f"Intersection {intersection}")
+print(f"Difference {difference}")
