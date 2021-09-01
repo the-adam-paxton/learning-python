@@ -1,11 +1,14 @@
-lettersA = {"A", "B", "C", "D"}
-lettersB = {"A", "E", "F"}
+person = {
+    "name": "Adam",
+    "age": 20,
+    "address": "USA"
+}
 
-# This can only be done with sets {} and fails if you try this with lists []
-union = lettersA | lettersB  # Add them together, order not guaranteed
-intersection = lettersA & lettersB  # What occurs in both
-difference = lettersA - lettersB  # What occurs in lettersA but not in lettersB
-
-print(f"Union {union}")
-print(f"Intersection {intersection}")
-print(f"Difference {difference}")
+print(person["name"])
+print(person["age"])
+print(person["address"])
+print(person.keys())
+print(person.values())
+# person.clear()
+person["age"] = 100
+print(person)
