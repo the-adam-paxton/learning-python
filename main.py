@@ -15,44 +15,24 @@ class Phone:
         else:
             return "No photo ability sadly"
 
+    # What is happening here is that when we call print() on this class, it goes off and looks for the str function,
+    # which we have over written here. So this method is called when we use the print() or str() on an object from
+    # this class
+    def __str__(self) -> str:
+        return f"Brand {self.brand} and price {self.price}"
+
+    # dunder repr (cool kids ways of saying 'double under repr') also gives a str representation of the object.
+    # __str__ is meant to be more human friendly, whereas __repr__ is supposed to contain info about the object in such
+    # a manner that it could be constructed again
+    def __repr__(self):
+        return f"phone(brand={self.brand}, price={self.price}, camera={self.camera})"
+
 
 # We are creating two objects, a phone object called iphone and a phone object called samsung, with their respective
 # attributes
 iphone = Phone("Iphone 7+", 300, False)
 samsung = Phone("Samsung S20", 1400, True)
 
-# Print out the brand and price attributes we have just defined
-print(iphone.brand)
-print(iphone.price)
-# Calling the iphone object we created and the call behaviour with the required parameters
-iphone.call("999")
-
-print(samsung.brand)
-print(samsung.price)
-samsung.call("999")
-
-print(iphone.photo())
-
-
-class Rectangle:
-    def __init__(self, length, breadth, unit_cost):
-        self.length = length
-        self.breadth = breadth
-        self.unit_cost = unit_cost
-
-    def get_perimeter(self):
-        return 2 * (self.length + self.breadth)
-
-    def get_area(self):
-        return self.length * self.breadth
-
-    def get_cost(self):
-        area = self.get_area()  # Calling a behaviour so we need the () - get_area()
-        return area * self.unit_cost  # Calling an attribute so don't need any args, so no () after unit_cost
-
-
-rectangle1 = Rectangle(100, 20, 10)
-
-print(rectangle1.get_perimeter())
-print(rectangle1.get_area())
-print(rectangle1.get_cost())
+print(iphone.__str__())
+print(samsung.__str__())
+print(iphone.__repr__())
