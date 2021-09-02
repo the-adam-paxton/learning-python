@@ -32,3 +32,27 @@ print(samsung.price)
 samsung.call("999")
 
 print(iphone.photo())
+
+
+class Rectangle:
+    def __init__(self, length, breadth, unit_cost):
+        self.length = length
+        self.breadth = breadth
+        self.unit_cost = unit_cost
+
+    def get_perimeter(self):
+        return 2 * (self.length + self.breadth)
+
+    def get_area(self):
+        return self.length * self.breadth
+
+    def get_cost(self):
+        area = self.get_area()  # Calling a behaviour so we need the () - get_area()
+        return area * self.unit_cost  # Calling an attribute so don't need any args, so no () after unit_cost
+
+
+rectangle1 = Rectangle(100, 20, 10)
+
+print(rectangle1.get_perimeter())
+print(rectangle1.get_area())
+print(rectangle1.get_cost())
