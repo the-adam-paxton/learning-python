@@ -1,27 +1,7 @@
-def greet(name, age=-1):
-    print(f"Hello {name}, how are you?")
-    if age >= 0:
-        print(f"My god you are {age} years old!")
+import calculator
 
-
-def is_adult(age):
-    return age >= 16
-
-
-def convert_gender(gender="unknown"):
-    gender = gender.upper()
-    if gender == "M":
-        return "Male"
-    elif gender == "F":
-        return "Female"
-    else:
-        return f"Gender {gender} is unknown"
-
-greet("Adam", 39)
-greet("Mila")
-
-result = is_adult(16)
-print(result)
-
-print(convert_gender("m"))
-print(convert_gender("hello"))
+# I could have also done from calculator import add and then I wouldn't need the calculator.add below, would have just been add()
+print(calculator.add(2,5))
+print(calculator.subtract(2,5))
+print(calculator.multiply(2,5))
+print(calculator.divide(2,4))
