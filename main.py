@@ -1,28 +1,27 @@
-number = 0
+def greet(name, age=-1):
+    print(f"Hello {name}, how are you?")
+    if age >= 0:
+        print(f"My god you are {age} years old!")
 
-print("While continue example")
-while number < 10:
-    number += 1
-    if number < 5:
-        continue
-    print(number)
 
-number = 0
-print("While break example")
-while number < 10:
-    if number == 5:
-        break
-    number += 1
-    print(number)
+def is_adult(age):
+    return age >= 16
 
-print("For continue example")
-for n in [1, 2, 3, 4, 5, 6, 7]:
-    if n < 5:
-        continue
-    print(n)
 
-print("For break example")
-for n in [3, 4, 5, 6, 7, 8, 9]:
-    if n >= 5:
-        break
-    print(n)
+def convert_gender(gender="unknown"):
+    gender = gender.upper()
+    if gender == "M":
+        return "Male"
+    elif gender == "F":
+        return "Female"
+    else:
+        return f"Gender {gender} is unknown"
+
+greet("Adam", 39)
+greet("Mila")
+
+result = is_adult(16)
+print(result)
+
+print(convert_gender("m"))
+print(convert_gender("hello"))
