@@ -1,9 +1,5 @@
-import os.path
+from urllib import request
 
-filename = "./data.csv"
-
-if os.path.isfile(filename):
-    with open("./data.csv", "r") as file:
-        print(file.read())
-else:
-    print(f"file {filename} does not exist")
+r = request.urlopen("http://www.google.com")
+print(r.getcode())
+print(r.read())
